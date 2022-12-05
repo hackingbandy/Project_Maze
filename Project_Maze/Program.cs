@@ -9,10 +9,11 @@ namespace Project_Maze // Note: actual namespace depends on the project name.
         {           
             ///
             /// Maze 
-            ///  1 --> 3 --> 5 
+            ///  1 --> 3 --> 6 
             ///  |     |
             ///  2     4
-            ///
+            ///        |
+            ///        5
             
         }
         public void Load_Maze(object sender, EventArgs e)
@@ -23,10 +24,14 @@ namespace Project_Maze // Note: actual namespace depends on the project name.
         void Fill(ref List<Ecke2> mazeList)
         {
             mazeList.Add(new Ecke2 { Ecke = 1, Ort = "Ort_1" });
-            mazeList.Add(new Ecke2 { Ecke = 2, Ort = "Ort_2" });
+            mazeList.Add(new Ecke2 { Ecke = 2, Ort = "Ort_2", IsExit = false });
             mazeList.Add(new Ecke2 { Ecke = 3, Ort = "Ort_3" });
-            mazeList.Add(new Ecke2 { Ecke = 4, Ort = "Ort_4" });
+            mazeList.Add(new Ecke2 { Ecke = 4, Ort = "Ort_4", IsExit = false });
             mazeList.Add(new Ecke2 { Ecke = 5, Ort = "Ort_5", IsExit = true });
+        }
+        void suche(int suche, ref List<Ecke2> maze)
+        {
+            Console.WriteLine(maze);
         }
     }
 }
