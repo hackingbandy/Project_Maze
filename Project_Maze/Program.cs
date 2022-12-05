@@ -6,13 +6,7 @@ namespace Project_Maze // Note: actual namespace depends on the project name.
     internal class Program
     {
         static void Main(string[] args)
-        {
-            List<Ecke2> Ecken = new List<Ecke2>();
-            Ecken.Add(new Ecke2 { Ecke = 1, Ort = "Ort_1" });
-            Ecken.Add(new Ecke2 { Ecke = 2, Ort = "Ort_2" });
-            Ecken.Add(new Ecke2 { Ecke = 3, Ort = "Ort_3" });
-            Ecken.Add(new Ecke2 { Ecke = 4, Ort = "Ort_4" });
-            Ecken.Add(new Ecke2 { Ecke = 5, Ort = "Ort_5", IsExit = true });
+        {           
             ///
             /// Maze 
             ///  1 --> 3 --> 5 
@@ -21,9 +15,18 @@ namespace Project_Maze // Note: actual namespace depends on the project name.
             ///
             
         }
-        //public int suche()
-        //{
-
-        //}
+        public void Load_Maze(object sender, EventArgs e)
+        {
+            List<Ecke2> maze = new List<Ecke2>();
+            Fill(ref maze);
+        }
+        void Fill(ref List<Ecke2> mazeList)
+        {
+            mazeList.Add(new Ecke2 { Ecke = 1, Ort = "Ort_1" });
+            mazeList.Add(new Ecke2 { Ecke = 2, Ort = "Ort_2" });
+            mazeList.Add(new Ecke2 { Ecke = 3, Ort = "Ort_3" });
+            mazeList.Add(new Ecke2 { Ecke = 4, Ort = "Ort_4" });
+            mazeList.Add(new Ecke2 { Ecke = 5, Ort = "Ort_5", IsExit = true });
+        }
     }
 }
