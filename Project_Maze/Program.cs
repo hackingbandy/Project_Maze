@@ -80,6 +80,8 @@ namespace Project_Maze // Note: actual namespace depends on the project name.
                 }
                 //speichere die aktuelle ecke und prüfe mit der folgenden, wenn der wert größer ist dann Right = true sonst Left = true. 
                 
+
+                
             }
         }
     }
