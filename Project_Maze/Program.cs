@@ -52,11 +52,25 @@ namespace Project_Maze // Note: actual namespace depends on the project name.
             mazeList.Add(new Ecke2 { Ecke = 5, Location = "Ort_5", IsExit = true });
         }
         void Fill2(ref List<Ecke3> irrg){
-            irrg.Add(new Ecke3{ Value = 4, Location = "Ort_1", IsStart = true});
-            irrg.Add(new Ecke3{ Value = 5, Location = "Ort_2"});
-            irrg.Add(new Ecke3{ Value = 2, Location = "Ort_3"});
-            irrg.Add(new Ecke3{ Value = 3, Location = "Ort_4"});
-            irrg.Add(new Ecke3{ Value = 1, Location = "Ort_5", IsExit = true});
+            irrg.Add(new Ecke3{ Value = 18, Location = "Ort_1", IsStart = true});
+            irrg.Add(new Ecke3{ Value = 19, Location = "Ort_2"});
+            irrg.Add(new Ecke3{ Value = 16, Location = "Ort_3"});
+            irrg.Add(new Ecke3{ Value = 17, Location = "Ort_4"});
+            irrg.Add(new Ecke3{ Value = 14, Location = "Ort_5"});
+            irrg.Add(new Ecke3{ Value = 15, Location = "Ort_6"});
+            irrg.Add(new Ecke3{ Value = 12, Location = "Ort_7"});
+            irrg.Add(new Ecke3{ Value = 13, Location = "Ort_8"});
+            irrg.Add(new Ecke3{ Value = 10, Location = "Ort_9"});
+            irrg.Add(new Ecke3{ Value = 11, Location = "Ort_10"});
+            irrg.Add(new Ecke3{ Value = 8, Location = "Ort_11"});
+            irrg.Add(new Ecke3{ Value = 9, Location = "Ort_12"});
+            irrg.Add(new Ecke3{ Value = 6, Location = "Ort_13"});
+            irrg.Add(new Ecke3{ Value = 7, Location = "Ort_14"});
+            irrg.Add(new Ecke3{ Value = 4, Location = "Ort_15"});
+            irrg.Add(new Ecke3{ Value = 5, Location = "Ort_16"});
+            irrg.Add(new Ecke3{ Value = 2, Location = "Ort_17"});
+            irrg.Add(new Ecke3{ Value = 3, Location = "Ort_18"});
+            irrg.Add(new Ecke3{ Value = 1, Location = "Ort_19", IsExit = true});
 
         }
         void suche(ref List<Ecke2> maze)
