@@ -73,15 +73,35 @@ namespace Project_Maze // Note: actual namespace depends on the project name.
         }
         void suche2(ref List<Ecke3> irrg){
             //Logic ...
+
             foreach(Ecke3 ecke in irrg){
                 ecke.IsVisited = true;
                 if(ecke.IsStart == true){
-                    Console.WriteLine(ecke.Location);
+                    Console.WriteLine($"Startpunkt: {ecke.Location}");
                 }
+                //Console.WriteLine($"Wert: {ecke.Value} Ort: {ecke.Location}");
                 //speichere die aktuelle ecke und prüfe mit der folgenden, wenn der wert größer ist dann Right = true sonst Left = true. 
+                //var tmp = ecke.GetEnumerator();
                 
 
-                
+                foreach(Ecke3 tmp in irrg){
+                    if(ecke.Value > tmp.Value) {
+                        ecke.Right = true; 
+                    }
+                    else if(ecke.Value < tmp.Value){
+                        ecke.Left = true; 
+                    }
+                //Console.WriteLine(tmp.Location);
+                //    Console.WriteLine(ecke.Location);
+                }
+                if (ecke.Left == true)
+                {
+                    Console.WriteLine(ecke.Location);
+                }
+                if (ecke.IsExit == true)
+                {
+                    Console.WriteLine($"Endpunkt: {ecke.Location}");
+                }
             }
         }
     }
