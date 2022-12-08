@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 
@@ -74,6 +75,7 @@ namespace Project_Maze // Note: actual namespace depends on the project name.
         void suche2(ref List<Ecke3> irrg){
             //Logic ...
 
+            int tmpint = 0;
             foreach(Ecke3 ecke in irrg){
                 ecke.IsVisited = true;
                 if(ecke.IsStart == true){
@@ -82,19 +84,23 @@ namespace Project_Maze // Note: actual namespace depends on the project name.
                 //Console.WriteLine($"Wert: {ecke.Value} Ort: {ecke.Location}");
                 //speichere die aktuelle ecke und prüfe mit der folgenden, wenn der wert größer ist dann Right = true sonst Left = true. 
                 //var tmp = ecke.GetEnumerator();
-                
 
-                foreach(Ecke3 tmp in irrg){
-                    if(ecke.Value > tmp.Value) {
+               // List<Ecke3> tmpo = new List<Ecke3>();
+                Ecke3 tmp = new Ecke3();
+
+                //tmpo.Add(ecke);
+                //foreach(Ecke3 tmp in tmpo){
+                
+                    if(ecke.Value > tmpint) {
                         ecke.Right = true; 
                     }
-                    else if(ecke.Value < tmp.Value){
+                    else{
                         ecke.Left = true; 
                     }
-                //Console.WriteLine(tmp.Location);
-                //    Console.WriteLine(ecke.Location);
-                }
-                if (ecke.Left == true)
+                    //Console.WriteLine(tmp.Location);
+                    //    Console.WriteLine(ecke.Location);
+                //}
+                if (ecke.Left == true || ecke.IsStart || ecke.IsExit)
                 {
                     Console.WriteLine(ecke.Location);
                 }
@@ -102,6 +108,7 @@ namespace Project_Maze // Note: actual namespace depends on the project name.
                 {
                     Console.WriteLine($"Endpunkt: {ecke.Location}");
                 }
+                tmpint = ecke.Value;
             }
         }
     }
