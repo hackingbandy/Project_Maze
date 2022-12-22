@@ -20,8 +20,6 @@ namespace Project_Maze
             fill_maze(ref irrg);
             search_maze(ref irrg);
         }
-
-        
         void fill_maze(ref List<Ecke> irrg){
             irrg.Add(new Ecke{ Value = 18, Location = "Ort_1", IsStart = true});
             irrg.Add(new Ecke{ Value = 19, Location = "Ort_2"});
@@ -43,7 +41,6 @@ namespace Project_Maze
             irrg.Add(new Ecke{ Value = 3, Location = "Ort_18"});
             irrg.Add(new Ecke{ Value = 1, Location = "Ort_19", IsExit = true});
         }
-       
         void search_maze(ref List<Ecke> irrg){
 
             int tmpint = 0;

@@ -18,6 +18,9 @@ namespace Project_Maze
         public bool IsVisited { get; set;}
         public bool IsExit { get; set;}
 
+        //Nachbarliste
+        public List<Ecke> neighbor = new List<Ecke>();
+
         public IEnumerator GetEnumerator()
         {
             return new Ecke_Enumerator();
