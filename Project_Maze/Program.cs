@@ -1,7 +1,5 @@
 ﻿using System;
-//using System.Diagnostics;
-//using System.Reflection;
-//using System.Security.Cryptography.X509Certificates;
+
 
 namespace Project_Maze 
 {
@@ -21,7 +19,6 @@ namespace Project_Maze
             search_maze(ref irrg);
         }
 
-        
         void fill_maze(ref List<Ecke> irrg){
             irrg.Add(new Ecke{ Value = 18, Location = "Ort_1", IsStart = true});
             irrg.Add(new Ecke{ Value = 19, Location = "Ort_2"});
