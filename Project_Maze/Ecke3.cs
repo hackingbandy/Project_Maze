@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Project_Maze
 {
-    public class Ecke3 : IEnumerable
+    public class Ecke : IEnumerable
     {
         //IDEE: Binärbaum
         public int Value {get; set;}
@@ -20,12 +20,12 @@ namespace Project_Maze
 
         public IEnumerator GetEnumerator()
         {
-            return new Ecke3_Enumerator();
+            return new Ecke_Enumerator();
         }
     }
-    public class Ecke3_Enumerator : IEnumerator
+    public class Ecke_Enumerator : IEnumerator
     {
-        public object Current { get; set; }
+        public object? Current { get; set; }
 
         public bool MoveNext()
         {
